@@ -12,18 +12,32 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .promo {
-      background-color: #fff3cd;
-      border: 1px solid #ffeeba;
-      color: #856404;
-      padding: 1rem;
-      border-radius: 5px;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      border: 2px solid #00bcd4;
+      color: #004d40;
+      padding: 1.5rem;
+      border-radius: 8px;
       text-align: center;
       font-weight: 500;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
     }
-    .promo a {
+    .promo h4 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .promo-code {
+      font-size: 1.2rem;
+      background-color: #b2ebf2;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
       display: inline-block;
-      margin-top: 0.5rem;
+      margin: 1rem 0;
+      font-family: monospace;
+    }
+    .promo-buttons a {
+      margin: 0.5rem;
     }
     .hero-img {
       width: 120px;
@@ -45,16 +59,20 @@
 <body>
   <div class="container py-4">
     <div class="promo">
-      🎉 Get 20% off your first project – use promo code <strong>APASDHAS8ZZZZZXXXXXXXX</strong><br>
-      <a class="btn btn-primary mt-2" href="https://www.upwork.com/freelancers/~0123456789abcdef" target="_blank">Book via Upwork</a>
-      <a class="btn btn-success mt-2" href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" target="_blank">Schedule a Call</a>
+      <h4>🎉 Welcome Offer for New Clients</h4>
+      <p>Claim <strong>20% off</strong> on your first mobile app project. I love working with passionate clients — let's bring your idea to life.</p>
+      <div class="promo-code">APASDHAS8ZZZZZXXXXXXXX</div>
+      <div class="promo-buttons">
+        <a class="btn btn-outline-primary" href="https://www.upwork.com/freelancers/~0123456789abcdef" target="_blank">Hire via Upwork</a>
+        <a class="btn btn-primary" href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" target="_blank">Claim Offer & Book a Call</a>
+      </div>
     </div>
 
     <div class="text-center mb-5">
       <img src="assets/profile.jpg" class="hero-img mb-3" alt="Ammar Ishfaq">
       <h1>Ammar Ishfaq</h1>
       <p class="text-primary fw-semibold">Senior Android | iOS | Flutter | KMP Developer</p>
-      <p>$25/hr | ⭐ 5-Star Rating | 5+ Years Experience</p>
+      <p>⭐ 5-Star Rating | 5+ Years Experience</p>
     </div>
 
     <div class="mb-5">

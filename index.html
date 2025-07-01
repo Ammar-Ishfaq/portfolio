@@ -1,175 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ammar Ishfaq | Senior Mobile Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
     body {
       background: #f9fafb;
       color: #111827;
-      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .container {
-      max-width: 960px;
-      margin: auto;
-    }
-    .hero {
+    .promo {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      padding: 1rem;
+      border-radius: 5px;
       text-align: center;
-      padding: 2rem 0;
+      font-weight: 500;
+      margin-bottom: 2rem;
     }
-    .hero img {
+    .promo a {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .hero-img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 3px solid #3b82f6;
-      margin-bottom: 1rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #1f2937;
-    }
-    .tagline {
-      font-size: 1.25rem;
-      color: #3b82f6;
-      font-weight: 600;
-    }
-    .rating {
-      color: #6b7280;
-      margin-top: 0.5rem;
-    }
-    .section {
-      margin-top: 2.5rem;
-    }
-    .section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #1f2937;
-      border-bottom: 2px solid #3b82f6;
-      display: inline-block;
-    }
-    .skills span {
-      display: inline-block;
-      background-color: #e0f2fe;
-      color: #0369a1;
-      padding: 0.5rem 0.75rem;
-      border-radius: 9999px;
-      margin: 0.3rem;
-      font-size: 0.9rem;
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .project-card {
-      background-color: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      object-fit: cover;
+      border: 3px solid #0d6efd;
     }
     .project-card img {
       width: 100%;
-      border-radius: 6px;
-      margin-bottom: 0.75rem;
-    }
-    .project-card h3 {
-      font-size: 1.2rem;
-      color: #111827;
-      margin-bottom: 0.5rem;
-    }
-    .project-card p {
-      color: #4b5563;
-      font-size: 0.95rem;
-    }
-    .expectations ul {
-      padding-left: 1rem;
-    }
-    .expectations li {
-      margin-bottom: 0.5rem;
-      color: #1e293b;
+      border-radius: 5px;
     }
     .cta {
       margin-top: 2rem;
       text-align: center;
     }
-    .cta a,
-    .promo a {
-      background-color: #3b82f6;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .promo {
-      background-color: #fef9c3;
-      color: #92400e;
-      padding: 1rem;
-      border: 1px solid #fde68a;
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 2rem;
-      border-radius: 6px;
-    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container py-4">
     <div class="promo">
       🎉 Get 20% off your first project – use promo code <strong>APASDHAS8ZZZZZXXXXXXXX</strong><br>
-      <a href="https://www.upwork.com/freelancers/~0123456789abcdef" target="_blank">Book Your Consultation</a>
+      <a class="btn btn-primary mt-2" href="https://www.upwork.com/freelancers/~0123456789abcdef" target="_blank">Book via Upwork</a>
+      <a class="btn btn-success mt-2" href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" target="_blank">Schedule a Call</a>
     </div>
 
-    <div class="hero">
-      <img src="assets/profile.jpg" alt="Ammar Ishfaq" />
+    <div class="text-center mb-5">
+      <img src="assets/profile.jpg" class="hero-img mb-3" alt="Ammar Ishfaq">
       <h1>Ammar Ishfaq</h1>
-      <p class="tagline">Senior Android | iOS | Flutter | KMP Developer</p>
-      <p class="rating">$25/hr | ⭐ 5-Star Rating | 5+ Years Experience</p>
+      <p class="text-primary fw-semibold">Senior Android | iOS | Flutter | KMP Developer</p>
+      <p>$25/hr | ⭐ 5-Star Rating | 5+ Years Experience</p>
     </div>
 
-    <div class="section about">
-      <h2>About Me</h2>
+    <div class="mb-5">
+      <h2 class="border-bottom pb-2">About Me</h2>
       <p>I’m a Senior Mobile App Developer with 5+ years of experience in building scalable, user-focused applications for Android, iOS, and cross-platform solutions. From native Android to Flutter and Kotlin Multiplatform, I specialize in robust solutions that blend performance, design, and functionality.</p>
     </div>
 
-    <div class="section skills">
-      <h2>Skills</h2>
-      <div>
-        <span>Flutter</span><span>KMP</span><span>SwiftUI</span><span>Kotlin</span><span>Java</span>
-        <span>Firebase</span><span>Node.js</span><span>Python</span><span>BLE</span><span>Stripe</span>
-        <span>REST APIs</span><span>MVVM</span><span>Compose</span><span>Git</span><span>Agile</span>
+    <div class="mb-5">
+      <h2 class="border-bottom pb-2">Skills</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Mobile Development:</strong> Kotlin, Java, Swift, SwiftUI, Jetpack Compose, Flutter, KMP</li>
+        <li class="list-group-item"><strong>Cross-platform:</strong> Flutter, Kotlin Multiplatform Mobile (KMM)</li>
+        <li class="list-group-item"><strong>Backend & APIs:</strong> Node.js, Python, Firebase, REST APIs</li>
+        <li class="list-group-item"><strong>Payment Systems:</strong> Stripe, PayPal, Apple Pay, Google Pay</li>
+        <li class="list-group-item"><strong>Architecture:</strong> MVVM, Clean Architecture</li>
+        <li class="list-group-item"><strong>Communication:</strong> WebSockets, Firebase Cloud Messaging, MQTT, BLE</li>
+        <li class="list-group-item"><strong>Tools:</strong> Git, Figma, Jira, Android Studio, Xcode</li>
+      </ul>
+    </div>
+
+    <div class="mb-5">
+      <h2 class="border-bottom pb-2">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card project-card">
+            <img src="assets/elevare.jpg" class="card-img-top" alt="Elevare">
+            <div class="card-body">
+              <h5 class="card-title">Elevare</h5>
+              <p class="card-text">Native Android app integrating custom APIs to create an engaging sports game experience.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card">
+            <img src="assets/food_llm.jpg" class="card-img-top" alt="AI Diet Planner">
+            <div class="card-body">
+              <h5 class="card-title">AI-Powered Diet Planner</h5>
+              <p class="card-text">AI-enhanced meal planner with offline LLM, calorie tracking, and dynamic recommendations.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="section projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="assets/elevare.jpg" alt="Elevare" />
-          <h3>Elevare</h3>
-          <p>Native Android app integrating custom APIs to create an engaging sports game experience.</p>
-        </div>
-        <div class="project-card">
-          <img src="assets/food_llm.jpg" alt="AI Planner" />
-          <h3>AI-Powered Diet Planner</h3>
-          <p>AI-enhanced meal planner with offline LLM, calorie tracking, and dynamic recommendations.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section expectations">
-      <h2>What You Can Expect</h2>
+    <div class="mb-5">
+      <h2 class="border-bottom pb-2">What You Can Expect</h2>
       <ul>
         <li>✅ Clean, scalable, and production-ready mobile apps</li>
         <li>✅ Transparent communication & weekly progress updates</li>
@@ -179,16 +110,18 @@
       </ul>
     </div>
 
-    <div class="section contact">
-      <h2>Contact</h2>
+    <div class="mb-5">
+      <h2 class="border-bottom pb-2">Contact</h2>
       <p>Email: <a href="mailto:ammarishfaq25@gmail.com">ammarishfaq25@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/ammar-ishfaq" target="_blank">github.com/ammar-ishfaq</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ammar-ishfaq" target="_blank">linkedin.com/in/ammar-ishfaq</a></p>
+      <p>WhatsApp: <a href="https://wa.me/923234164199" target="_blank">+92 323 4164199</a></p>
     </div>
 
     <div class="cta">
-      <a href="https://www.upwork.com/freelancers/~0123456789abcdef" target="_blank">Book a Free Consultation</a>
+      <a class="btn btn-success btn-lg" href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" target="_blank">Schedule a Free Call</a>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

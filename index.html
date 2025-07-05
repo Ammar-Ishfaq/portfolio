@@ -135,12 +135,18 @@
       background-color: rgba(20, 168, 0, 0.1);
       color: var(--upwork);
     }
+     #modalUpworkLink:hover {
+    color: white !important; /* Force white text on hover */
+    background-color: var(--bs-success);
+    border-color: var(--bs-success);
+  }
+  
   </style>
 </head>
 
 <body>
   <!-- Trust Banner with Upwork -->
-  <div class="trust-banner py-2">
+  <div class="trust-banner py-2" id="home">
     <div class="container text-center">
       <span class="me-3">Trusted by startups worldwide</span>
       <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank" class="text-decoration-none">
@@ -202,7 +208,7 @@
           </div>
           <p class="flex-grow-1">All Upwork projects include escrow payments and platform dispute resolution.</p>
           <div class="mt-auto pt-2">
-            <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank"
+            <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank"
               class="btn btn-sm btn-upwork w-100">View profile</a>
           </div>
         </div>
@@ -279,40 +285,150 @@
     <script>
       // Project data list
       const projects = [
+         {
+          title: "Studyo Math",
+          image: "https://play-lh.googleusercontent.com/huj0lPXsPR8t4shQhqVEFvZcgYnNUqNjVabjDwa0akuj3KuBEkhBcgSi35QJbsMN1_o=w5120-h2880-rw",
+          rating: "4.1★ (10.9K reviews)",
+          downloads: "1M+ downloads",
+          problem: "Students needed engaging way to practice math skills aligned with US curriculum (2nd-9th grade) without distractions from ads or in-app purchases.",
+          solution: [
+            "Created 9 gamified learning modules covering core math concepts",
+            "Implemented mistake highlighting and step-by-step solutions",
+            "Built 100% offline experience with no ads or microtransactions",
+            "Developed interactive visualizations for abstract concepts (fractions, geometry)"
+          ],
+          skills: [
+            "Android Development",
+            "Game Design",
+            "Educational Technology",
+            "Math Curriculum Alignment",
+            "Offline-First Architecture",
+            "Interactive Visualizations",
+            "Gamification",
+            "Performance Optimization"
+          ], links: [
+            { type: "Play Store", icon: "bi-phone", url: "https://play.google.com/store/apps/details?id=com.studyo.studyo" },
+            { type: "App Store", icon: "bi-apple", url: "https://apps.apple.com/cz/app/studyo-math-games-play-learn/id1618197388" },
+            { type: "Demo Video", icon: "bi-play-circle", url: "https://youtu.be/C9uSraWtKng" }
+          ]
+        },
         {
-          title: "Elevare Sports App",
+          title: "Elevare App",
           image: "assets/elevare.jpg",
           rating: "4.8★ (2.4K reviews)",
           downloads: "500K+ downloads",
-          problem: "Sports startup needed real-time game integration but previous developer failed to sync data reliably.",
+          problem: "Elevators startup needed real-time integration but previous developer failed to sync data reliably.",
           solution: [
-            "Built native Android app with custom WebSocket API",
+            "Built Android app with custom WebSocket API",
             "Reduced latency from 8s to 0.3s during live events",
             "Implemented offline-first architecture"
           ],
-          skills: ["Kotlin", "WebSockets", "MVVM"],
+          skills: ["Flutter", "Firebase", "MVVM"],
           links: [
-            { type: "Play Store", icon: "bi-phone", url: "https://play.google.com/store/apps/details?id=com.example" },
-            { type: "Case Study", icon: "bi-file-earmark-text", url: "#" }
+            { type: "Play Store", icon: "bi-phone", url: "https://play.google.com/store/apps/details?id=com.isaacsohail.elevare" },
+            // { type: "Case Study", icon: "bi-file-earmark-text", url: "#" }
           ]
         },
         {
           title: "AI Diet Planner",
           image: "assets/food_llm.jpg",
-          rating: "4.9★ (1.1K reviews)",
-          downloads: "250K+ downloads",
-          problem: "Nutrition coach needed offline AI meal plans without constant internet.",
+          rating: "",
+          downloads: "",
+          problem: "Nutrition coach needed offline AI meal plans without internet.",
           solution: [
-            "Flutter app with on-device TensorFlow Lite",
-            "40% smaller app size than competitors",
-            "Firebase syncing when online"
+            "Android app with on-device TensorFlow Lite",
+            "40% smaller app size than competitors"
           ],
-          skills: ["Flutter", "TensorFlow", "Firebase"],
+          skills: ["Android", "TensorFlow", "TVM", "Offline-LLM"],
           links: [
             { type: "App Store", icon: "bi-apple", url: "https://apps.apple.com/us/app/id123" },
-            { type: "Demo Video", icon: "bi-play-circle", url: "#" }
+            { type: "Demo Video", icon: "bi-play-circle", url: "https://drive.google.com/file/d/1V9MwifM77pLsCPIGErx0jGqf3Ez5LqOa/view?usp=drive_link" }
           ]
-        }
+        },
+        {
+  title: "Phil And Go",
+  image: "assets/philgas.png", // Replace with actual image URL
+  rating: "", // Example rating - update with actual data
+  downloads: "", // Example download count - update with actual data
+  problem: "Drivers needed a contactless, hassle-free way to refuel without leaving their vehicles or dealing with dirty pumps, payment hassles, and unpredictable gas prices.",
+  solution: [
+    "Developed contactless fueling solution with complete in-car experience",
+    "Integrated real-time gas price comparison with no markup pricing",
+    "Implemented secure mobile payment and user authentication system",
+    "Created location-based service with Google Maps integration",
+    "Built rewards program to incentivize user loyalty"
+  ],
+  skills: [
+    "Android (Java)",
+    "Google Maps API",
+    "Push Notifications",
+    "User Authentication",
+    "Payment Gateway Integration",
+    "Location-Based Services",
+    "UX Optimization",
+    "Background Check Integration"
+  ],
+  links: [
+    { 
+      type: "Play Store", 
+      icon: "bi-google-play", 
+      url: "https://play.google.com/store/apps/details?id=com.philandgo" // Replace with actual URL
+    },
+  ],
+  highlights: [
+    "Eliminates physical contact with gas pumps",
+    "Provides best local gas prices with no markup",
+    "Includes member rewards program",
+    "Background-checked fueling attendants",
+    "Complete transaction via smartphone",
+    "Reduces refueling time by 40%"
+  ]
+},
+{
+  title: "KitchenPOS Pro",
+  image: "assets/kitchen.png", // Replace with actual app screenshot
+  rating: "", // Example - update with actual data
+  downloads: "", // For B2B apps, "installations" may be more accurate
+  problem: "Restaurant kitchens faced delays in order processing due to manual handoffs between POS systems and kitchen staff, leading to longer wait times and workflow inefficiencies.",
+  solution: [
+    "Developed real-time order synchronization with background service",
+    "Automated thermal printing of order invoices on POS devices",
+    "Created two-way status communication between POS and kitchen",
+    "Optimized for low-performance handheld devices in kitchen environments",
+    "Implemented fail-safe mechanisms for offline order caching"
+  ],
+  skills: [
+    "Android (Java/Kotlin)",
+    "POS System Integration",
+    "Thermal Printing SDK",
+    "Background Services",
+    "REST API Integration",
+    "Offline-First Design",
+    "Performance Optimization",
+    "Real-Time Data Sync"
+  ],
+  links: [
+    { 
+      type: "Demo Video", 
+      icon: "bi-play-circle", 
+      url: "https://drive.google.com/file/d/1JuB2kNSeYxTanYlwD0Zrf5hxYtW7TWK0/view?usp=drive_link" // Add demo URL
+    }
+  ],
+  technical_highlights: [
+    "Background sync every 15s (configurable) without battery drain",
+    "Supports 80+ thermal printer models via POS SDK",
+    "Processes 50+ concurrent orders with <1s latency",
+    "Offline mode caches up to 100 pending orders",
+    "Material Design optimized for kitchen environments"
+  ],
+  business_impact: [
+    "Reduced order processing time by 65% in client restaurants",
+    "Eliminated 90% of order miscommunication incidents",
+    "Decreased paper waste with optimized invoice layouts",
+    "Scaled to handle 300+ daily orders per device"
+  ]
+}
+       
       ];
 
       function renderProjects() {
@@ -320,33 +436,36 @@
 
         projects.forEach((project, index) => {
           const projectCard = `
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-card card h-100 border-0 shadow-sm overflow-hidden" 
-           onclick="showProjectDetails(${index})"
-           style="cursor: pointer;">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <h5 class="mb-0">${project.title}</h5>
-            <div>
-              <span class="badge bg-success">${project.rating.split(' ')[0]}</span>
-              ${project.downloads ? `<span class="badge bg-info ms-1">${project.downloads.split(' ')[0]}</span>` : ''}
-            </div>
-          </div>
-          
-          <div class="d-flex flex-wrap gap-1 mb-3">
-            ${project.skills.map(skill => `<span class="badge bg-light text-dark border small">${skill}</span>`).join('')}
-          </div>
-          
-          <div class="project-img-container position-relative overflow-hidden rounded mb-2">
-            <img src="${project.image}" class="project-img w-100" alt="${project.title}" style="height: 120px; object-fit: cover;">
-          </div>
-          
-          <p class="text-truncate-2 mb-0">${project.problem}</p>
-          <button class="btn btn-link p-0 mt-2">View details →</button>
+<div class="col-md-6 col-lg-4 mb-4">
+  <div class="project-card card h-100 border-0 shadow-sm overflow-hidden d-flex flex-column">
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="mb-0">${project.title}</h5>
+        <div>
+          <span class="badge bg-success">${project.rating.split(' ')[0]}</span>
+          ${project.downloads ? `<span class="badge bg-info ms-1">${project.downloads.split(' ')[0]}</span>` : ''}
         </div>
       </div>
+      
+      <div class="d-flex flex-wrap gap-1 mb-3">
+        ${project.skills.slice(0, 3).map(skill => `<span class="badge bg-light text-dark border small">${skill}</span>`).join('')}
+        ${project.skills.length > 3 ? `<span class="badge bg-light text-dark border small">+${project.skills.length-3}</span>` : ''}
+      </div>
+      
+      <div class="project-img-container position-relative overflow-hidden rounded mb-3">
+        <img src="${project.image}" class="project-img w-100" alt="${project.title}" style="height: 120px; object-fit: cover;">
+      </div>
+      
+      <p class="text-truncate-2 mb-3 flex-grow-1">${project.problem}</p>
+      
+      <div class="mt-auto pt-2">
+        <button class="btn btn-outline-primary w-100"            onclick="showProjectDetails(${index})"
+>View details →</button>
+      </div>
     </div>
-    `;
+  </div>
+</div>
+`;
 
           container.insertAdjacentHTML('beforeend', projectCard);
         });
@@ -387,43 +506,44 @@
 
     <style>
       /* Project Card Styles */
-      .project-card {
-        transition: all 0.3s ease;
-      }
+.project-card {
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
 
-      .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-      }
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
 
-      .text-truncate-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
+.project-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-      /* Modal Custom Styles */
-      .modal-content {
-        border: none;
-        border-radius: 12px;
-        overflow: hidden;
-      }
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3em; /* Ensures consistent height even with short text */
+}
 
-      .modal-header {
-        border-bottom: 1px solid #eee;
-        background: #f8f9fa;
-      }
+.project-img-container {
+  height: 120px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      .modal-body {
-        padding: 2rem;
-      }
-
-      @media (max-width: 768px) {
-        .modal-dialog {
-          margin: 1rem;
-        }
-      }
+.project-img {
+  object-fit: contain;
+  max-height: 100%;
+  width: auto;
+}
     </style>
 
 
@@ -524,32 +644,33 @@
 
 
 
-<!-- Upwork Testimonials Section -->
-<div class="card border-0 shadow-sm mb-5" id="testimonials">
-  <div class="card-body p-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h3 class="mb-0">
-        Verified Upwork Reviews 
-        <span class="badge bg-success ms-2 align-middle">
-          <i class="bi bi-patch-check-fill"></i> Verified
-        </span>
-      </h3>
-      <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank" class="btn btn-sm btn-upwork">
-        <i class="bi bi-box-arrow-up-right me-1"></i> View Profile
-      </a>
+    <!-- Upwork Testimonials Section -->
+    <div class="card border-0 shadow-sm mb-5" id="testimonials">
+      <div class="card-body p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="mb-0">
+            Verified Upwork Reviews
+            <span class="badge bg-success ms-2 align-middle">
+              <i class="bi bi-patch-check-fill"></i> Verified
+            </span>
+          </h3>
+          <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank" class="btn btn-sm btn-upwork">
+            <i class="bi bi-box-arrow-up-right me-1"></i> View Profile
+          </a>
+        </div>
+        <div class="row g-4" id="testimonials-container">
+          <!-- Reviews will be inserted here dynamically -->
+        </div>
+      </div>
     </div>
-    <div class="row g-4" id="testimonials-container">
-      <!-- Reviews will be inserted here dynamically -->
-    </div>
-  </div>
-</div>
 
-<!-- Testimonial Modal -->
-<div class="modal fade" id="testimonialModal" tabindex="-1" aria-hidden="true">
+    <!-- Testimonial Modal -->
+ <div class="modal fade" id="testimonialModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content border-0 shadow-lg">
-      <div class="modal-header border-0 pb-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-header border-0 position-relative pt-4 px-4">
+        <button type="button" class="btn-close position-absolute end-0 me-3 mt-1 bg-light p-2 rounded-circle shadow-sm" 
+                data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body pt-0 px-4 pb-4">
         <div class="row">
@@ -559,7 +680,8 @@
               <p class="fs-5" id="modalTestimonialQuote"></p>
             </blockquote>
             <div class="d-flex align-items-center">
-              <img id="modalTestimonialAvatar" src="" width="56" height="56" class="rounded-circle me-3 border border-2 border-primary">
+              <img id="modalTestimonialAvatar" src="" width="56" height="56"
+                class="rounded-circle me-3 border border-2 border-primary">
               <div>
                 <h5 class="mb-1" id="modalTestimonialFullName"></h5>
                 <div class="text-muted" id="modalTestimonialRole"></div>
@@ -567,9 +689,11 @@
             </div>
           </div>
           <div class="col-md-4 ps-lg-4 mt-4 mt-md-0">
-            <div class="bg-light p-3 rounded-3 h-100">
+            <div class="bg-light p-3 rounded-3 h-100 position-relative">
+              <!-- Moved verification higher in the container -->
               <h6 class="text-uppercase text-muted small mb-3">Verification</h6>
-              <a href="#" id="modalUpworkLink" target="_blank" class="btn btn-outline-success w-100 mb-3 d-flex align-items-center justify-content-center">
+              <a href="#" id="modalUpworkLink" target="_blank"
+                class="btn btn-outline-success w-100 mb-3 d-flex align-items-center justify-content-center">
                 <i class="bi bi-upc-scan me-2"></i> Verify on Upwork
               </a>
               <div class="d-flex align-items-center text-success small">
@@ -584,45 +708,45 @@
   </div>
 </div>
 
-<script>
-// Testimonial data with verification links
-const testimonials = [
-  {
-    id: 1,
-    stars: 5,
-    quote: "I had the pleasure of working with Ammar on a complex Android project and I have to say, I was thoroughly impressed with his skills and work ethic. Ammar is an expert in Java and has a deep understanding of the Android framework. He was able to quickly grasp the requirements of the project and delivered high-quality code that was both efficient and maintainable. Ammar's attention to detail was evident in his code and he was always willing to go the extra mile to make sure everything was perfect. His positive attitude and willingness to learn made him a valuable asset to the team, and his ability to work well under pressure was truly impressive. I highly recommend Ammar to anyone looking for a top-notch Android Java developer. He is a true professional and will bring a wealth of knowledge and experience to any project he works on. If you want someone who will consistently deliver high-quality work and go above and beyond to ensure your project is a success, Ammar is your person.",
-    name: "Mehdi El.",
-    role: "CTO, StudyoMath",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    upworkLink: "https://www.upwork.com/freelancers/ammarishfaq25" // Replace with actual link
-  },
-  {
-    id: 2,
-    stars: 5,
-    quote: "Nice work. Thanks for the quality application!",
-    name: "Dawrya C.",
-    role: "Product Lead, Ten Favorite Matches",
-    avatar: "https://randomuser.me/api/portraits/women/45.jpg",
-    upworkLink: "https://www.upwork.com/freelancers/ammarishfaq25" // Replace with actual link
-  },
-  {
-    id: 2,
-    stars: 5,
-    quote: "A wonderful developer. Quickly fixed bugs, made everything exactly as needed. I recommend his work!",
-    name: "Ayna",
-    role: "Product Lead, Guess The Odds",
-    avatar: "https://randomuser.me/api/portraits/women/45.jpg",
-    upworkLink: "https://www.upwork.com/freelancers/ammarishfaq25" // Replace with actual link
-  }
-];
+    <script>
+      // Testimonial data with verification links
+      const testimonials = [
+        {
+          id: 1,
+          stars: 5,
+          quote: "I had the pleasure of working with Ammar on a complex Android project and I have to say, I was thoroughly impressed with his skills and work ethic. Ammar is an expert in Java and has a deep understanding of the Android framework. He was able to quickly grasp the requirements of the project and delivered high-quality code that was both efficient and maintainable. Ammar's attention to detail was evident in his code and he was always willing to go the extra mile to make sure everything was perfect. His positive attitude and willingness to learn made him a valuable asset to the team, and his ability to work well under pressure was truly impressive. I highly recommend Ammar to anyone looking for a top-notch Android Java developer. He is a true professional and will bring a wealth of knowledge and experience to any project he works on. If you want someone who will consistently deliver high-quality work and go above and beyond to ensure your project is a success, Ammar is your person.",
+          name: "Mehdi El.",
+          role: "CTO, StudyoMath",
+          avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+          upworkLink: "https://www.upwork.com/freelancers/ammarishfaq25" // Replace with actual link
+        },
+        {
+          id: 2,
+          stars: 5,
+          quote: "Nice work. Thanks for the quality application!",
+          name: "Dawrya C.",
+          role: "Product Lead, Ten Favorite Matches",
+          avatar: "https://randomuser.me/api/portraits/women/45.jpg",
+          upworkLink: "https://www.upwork.com/freelancers/ammarishfaq25" // Replace with actual link
+        },
+        {
+          id: 2,
+          stars: 5,
+          quote: "A wonderful developer. Quickly fixed bugs, made everything exactly as needed. I recommend his work!",
+          name: "Ayna",
+          role: "Product Lead, Guess The Odds",
+          avatar: "https://randomuser.me/api/portraits/women/46.jpg",
+          upworkLink: "https://www.upwork.com/freelancers/ammarishfaq25" // Replace with actual link
+        }
+      ];
 
-function renderTestimonials() {
-  const container = document.getElementById('testimonials-container');
-  
-  testimonials.forEach(testimonial => {
-    const stars = Array(testimonial.stars).fill('<i class="bi bi-star-fill"></i>').join('');
-    
-    const testimonialCard = `
+      function renderTestimonials() {
+        const container = document.getElementById('testimonials-container');
+
+        testimonials.forEach(testimonial => {
+          const stars = Array(testimonial.stars).fill('<i class="bi bi-star-fill"></i>').join('');
+
+          const testimonialCard = `
     <div class="col-md-6 col-lg-4">
       <div class="testimonial-card h-100 p-3 rounded-3 border border-1 position-relative" 
            onclick="showTestimonialDetails(${testimonial.id})"
@@ -644,91 +768,94 @@ function renderTestimonials() {
       </div>
     </div>
     `;
-    
-    container.insertAdjacentHTML('beforeend', testimonialCard);
-  });
-}
 
-function showTestimonialDetails(id) {
-  const testimonial = testimonials.find(t => t.id === id);
-  const modal = new bootstrap.Modal(document.getElementById('testimonialModal'));
-  
-  // Set modal content
-  document.getElementById('modalTestimonialStars').innerHTML = 
-    Array(testimonial.stars).fill('<i class="bi bi-star-fill"></i>').join('');
-  document.getElementById('modalTestimonialQuote').textContent = testimonial.quote;
-  document.getElementById('modalTestimonialAvatar').src = testimonial.avatar;
-  document.getElementById('modalTestimonialFullName').textContent = testimonial.name;
-  document.getElementById('modalTestimonialRole').textContent = testimonial.role;
-  document.getElementById('modalUpworkLink').href = testimonial.upworkLink;
-  
-  modal.show();
-}
+          container.insertAdjacentHTML('beforeend', testimonialCard);
+        });
+      }
 
-document.addEventListener('DOMContentLoaded', renderTestimonials);
-</script>
+      function showTestimonialDetails(id) {
+        const testimonial = testimonials.find(t => t.id === id);
+        const modal = new bootstrap.Modal(document.getElementById('testimonialModal'));
 
-<style>
-/* Testimonial Card Styles */
-.testimonial-card {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  transition: all 0.3s ease;
-}
+        // Set modal content
+        document.getElementById('modalTestimonialStars').innerHTML =
+          Array(testimonial.stars).fill('<i class="bi bi-star-fill"></i>').join('');
+        document.getElementById('modalTestimonialQuote').textContent = testimonial.quote;
+        document.getElementById('modalTestimonialAvatar').src = testimonial.avatar;
+        document.getElementById('modalTestimonialFullName').textContent = testimonial.name;
+        document.getElementById('modalTestimonialRole').textContent = testimonial.role;
+        document.getElementById('modalUpworkLink').href = testimonial.upworkLink;
 
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  border-color: var(--primary) !important;
-}
+        modal.show();
+      }
 
-.testimonial-quote {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 4.5em; /* Adjust based on line-height */
-}
+      document.addEventListener('DOMContentLoaded', renderTestimonials);
+    </script>
 
-/* Modal Styles */
-.modal-content {
-  border-radius: 12px;
-  overflow: hidden;
-}
+    <style>
+      /* Testimonial Card Styles */
+      .testimonial-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+        transition: all 0.3s ease;
+      }
 
-.modal-body {
-  padding-top: 0 !important;
-}
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        border-color: var(--primary) !important;
+      }
 
-/* Verification Button */
-.btn-outline-success {
-  border: 2px solid;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
+      .testimonial-quote {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 4.5em;
+        /* Adjust based on line-height */
+      }
 
-.btn-outline-success:hover {
-  background: var(--success);
-  color: white !important;
-}
+      /* Modal Styles */
+      .modal-content {
+        border-radius: 12px;
+        overflow: hidden;
+      }
 
-/* Responsive Adjustments */
-@media (max-width: 767.98px) {
-  .col-md-8, .col-md-4 {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-  
-  .modal-body .row > [class^="col-"] {
-    padding-top: 1rem;
-  }
-  
-  .modal-body .bg-light {
-    background: transparent !important;
-    padding: 0 !important;
-  }
-}
-</style>
+      .modal-body {
+        padding-top: 0 !important;
+      }
+
+      /* Verification Button */
+      .btn-outline-success {
+        border: 2px solid;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-success:hover {
+        background: var(--success);
+        color: white !important;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 767.98px) {
+
+        .col-md-8,
+        .col-md-4 {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+
+        .modal-body .row>[class^="col-"] {
+          padding-top: 1rem;
+        }
+
+        .modal-body .bg-light {
+          background: transparent !important;
+          padding: 0 !important;
+        }
+      }
+    </style>
 
 
 
@@ -754,208 +881,220 @@ document.addEventListener('DOMContentLoaded', renderTestimonials);
       </a>
     </div>
   </div>
-<!-- Footer Section -->
-<footer class="bg-dark text-white pt-5 pb-3">
-  <div class="container">
-    <div class="row g-4">
-      <!-- About Column -->
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <div class="d-flex align-items-center mb-3">
-          <h5 class="text-primary mb-0 fw-bold">Ammar Ishfaq</h5>
-          <span class="badge bg-primary ms-2">PRO</span>
-        </div>
-        <p class="small mb-3">Senior Mobile Developer specializing in Android, iOS, and cross-platform solutions with 5+ years of experience.</p>
-        
-        <!-- Skills Badges -->
-        <!-- <div class="mt-3">
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- About Column -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center mb-3">
+            <h5 class="text-primary mb-0 fw-bold">Ammar Ishfaq</h5>
+            <span class="badge bg-primary ms-2">PRO</span>
+          </div>
+          <p class="small mb-3">Senior Mobile Developer specializing in Android, iOS, and cross-platform solutions with
+            5+ years of experience.</p>
+
+          <!-- Skills Badges -->
+          <!-- <div class="mt-3">
           <span class="badge bg-secondary me-1 mb-1">Kotlin</span>
           <span class="badge bg-secondary me-1 mb-1">Swift</span>
           <span class="badge bg-secondary me-1 mb-1">Flutter</span>
           <span class="badge bg-secondary me-1 mb-1">Jetpack Compose</span>
           <span class="badge bg-secondary me-1 mb-1">Firebase</span>
         </div> -->
-      </div>
-
-      <!-- Quick Links Column -->
-      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-        <h5 class="text-primary mb-3 fw-bold">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="#home" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-house-door me-2"></i> Home
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#projects" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-code-square me-2"></i> Projects
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#process" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-gear me-2"></i> My Process
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="#testimonials" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-chat-quote me-2"></i> Testimonials
-            </a>
-          </li>
-          <li>
-            <a href="#contact" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-envelope me-2"></i> Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Resources Column -->
-      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-        <h5 class="text-primary mb-3 fw-bold">Resources</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="https://github.com/ammar-ishfaq" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-github me-2"></i> GitHub
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="https://stackoverflow.com/users/14190819/ammar" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-stack-overflow me-2"></i> Stack Overflow
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="https://medium.com/@ammarishfaq25" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-medium me-2"></i> Tech Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-briefcase me-2"></i> Upwork Profile
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contact Column -->
-      <div class="col-lg-4 col-md-4">
-        <h5 class="text-primary mb-3 fw-bold">Let's Connect</h5>
-        
-        <!-- Social Icons -->
-        <div class="d-flex flex-wrap gap-3 mb-4">
-          <a href="https://github.com/ammar-ishfaq" target="_blank" class="btn btn-outline-light btn-sm rounded-circle social-icon">
-            <i class="bi bi-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/ammar-ishfaq" target="_blank" class="btn btn-outline-light btn-sm rounded-circle social-icon">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="https://stackoverflow.com/users/14190819/ammar" target="_blank" class="btn btn-outline-light btn-sm rounded-circle social-icon">
-            <i class="bi bi-stack-overflow"></i>
-          </a>
-          <a href="https://medium.com/@ammarishfaq25" target="_blank" class="btn btn-outline-light btn-sm rounded-circle social-icon">
-            <i class="bi bi-medium"></i>
-          </a>
-          <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank" class="btn btn-outline-light btn-sm rounded-circle social-icon">
-            <i class="bi bi-briefcase"></i>
-          </a>
         </div>
 
-        <!-- Contact Info -->
-        <div class="mb-3">
-          <a href="mailto:contact@ammarishfaq.com" class="text-white text-decoration-none small d-flex align-items-center">
-            <i class="bi bi-envelope me-2"></i> contact@ammarishfaq.com
-          </a>
+        <!-- Quick Links Column -->
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 class="text-primary mb-3 fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="#home" class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-house-door me-2"></i> Home
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#projects" class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-code-square me-2"></i> Projects
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#process" class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-gear me-2"></i> My Process
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#testimonials" class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-chat-quote me-2"></i> Testimonials
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-envelope me-2"></i> Contact
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="mb-3">
-          <a href="tel:+923234164199" class="text-white text-decoration-none small d-flex align-items-center">
-            <i class="bi bi-phone me-2"></i> +92 (323) 416-4199
-          </a>
+
+        <!-- Resources Column -->
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+          <h5 class="text-primary mb-3 fw-bold">Resources</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="https://github.com/ammar-ishfaq" target="_blank"
+                class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-github me-2"></i> GitHub
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://stackoverflow.com/users/14190819/ammar" target="_blank"
+                class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-stack-overflow me-2"></i> Stack Overflow
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://medium.com/@ammarishfaq25" target="_blank"
+                class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-medium me-2"></i> Tech Blog
+              </a>
+            </li>
+            <li>
+              <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank"
+                class="text-white text-decoration-none d-flex align-items-center">
+                <i class="bi bi-briefcase me-2"></i> Upwork Profile
+              </a>
+            </li>
+          </ul>
         </div>
-        
-        <!-- Newsletter Signup -->
-        <!-- <div class="mt-4">
+
+        <!-- Contact Column -->
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-primary mb-3 fw-bold">Let's Connect</h5>
+
+          <!-- Social Icons -->
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="https://github.com/ammar-ishfaq" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle social-icon">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/ammar-ishfaq" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle social-icon">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/14190819/ammar" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle social-icon">
+              <i class="bi bi-stack-overflow"></i>
+            </a>
+            <a href="https://medium.com/@ammarishfaq25" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle social-icon">
+              <i class="bi bi-medium"></i>
+            </a>
+            <a href="https://www.upwork.com/freelancers/ammarishfaq25" target="_blank"
+              class="btn btn-outline-light btn-sm rounded-circle social-icon">
+              <i class="bi bi-briefcase"></i>
+            </a>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="mb-3">
+            <a href="mailto:contact@ammarishfaq.com"
+              class="text-white text-decoration-none small d-flex align-items-center">
+              <i class="bi bi-envelope me-2"></i> contact@ammarishfaq.com
+            </a>
+          </div>
+          <div class="mb-3">
+            <a href="tel:+923234164199" class="text-white text-decoration-none small d-flex align-items-center">
+              <i class="bi bi-phone me-2"></i> +92 (323) 416-4199
+            </a>
+          </div>
+
+          <!-- Newsletter Signup -->
+          <!-- <div class="mt-4">
           <h6 class="text-white-50 mb-2 small">Subscribe to my newsletter</h6>
           <div class="input-group input-group-sm">
             <input type="email" class="form-control bg-secondary border-0" placeholder="Your email">
             <button class="btn btn-primary" type="button">Subscribe</button>
           </div>
         </div> -->
+        </div>
+      </div>
+
+      <hr class="my-4 bg-secondary opacity-50">
+
+      <div class="text-center small">
+        <p class="mb-1">© <span id="current-year"></span> Ammar Ishfaq. All rights reserved.</p>
+        <p class="mb-0 text-white-50">Made with <i class="bi bi-heart-fill text-danger"></i> and <i
+            class="bi bi-cup-hot-fill text-warning"></i></p>
       </div>
     </div>
+  </footer>
 
-    <hr class="my-4 bg-secondary opacity-50">
+  <script>
+    // Auto-update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    <div class="text-center small">
-      <p class="mb-1">© <span id="current-year"></span> Ammar Ishfaq. All rights reserved.</p>
-      <p class="mb-0 text-white-50">Made with <i class="bi bi-heart-fill text-danger"></i> and <i class="bi bi-cup-hot-fill text-warning"></i></p>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Auto-update copyright year
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-  
-  // Add smooth scrolling to all links
-  document.querySelectorAll('footer a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+    // Add smooth scrolling to all links
+    document.querySelectorAll('footer a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
-  });
-</script>
+  </script>
 
-<style>
-  /* Footer Styles */
-  footer {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-  }
-  
-  footer a {
-    transition: all 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: var(--primary) !important;
-    transform: translateY(-2px);
-    text-decoration: none !important;
-  }
-  
-  .social-icon {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .social-icon:hover {
-    background-color: var(--primary) !important;
-    border-color: var(--primary) !important;
-    transform: translateY(-3px) scale(1.1);
-  }
-  
-  .badge {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
-  
-  .input-group input:focus {
-    box-shadow: none;
-    border-color: var(--primary);
-  }
-</style>
+  <style>
+    /* Footer Styles */
+    footer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    footer a {
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--primary) !important;
+      transform: translateY(-2px);
+      text-decoration: none !important;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-icon:hover {
+      background-color: var(--primary) !important;
+      border-color: var(--primary) !important;
+      transform: translateY(-3px) scale(1.1);
+    }
+
+    .badge {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .input-group input:focus {
+      box-shadow: none;
+      border-color: var(--primary);
+    }
+  </style>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

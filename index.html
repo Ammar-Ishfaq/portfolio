@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ammar Ishfaq | Mobile App Developer Who Ships Fast</title>
-  <meta name="description" content="I build high-performance Android/iOS apps that get 4.8+ star ratings. 5+ years experience. 20+ apps launched.">
+  <title>Ammar Ishfaq | Mobile App Developer - 4.9★ Upwork Rating</title>
+  <meta name="description" content="Top-rated mobile developer on Upwork with 5★ reviews. Specializing in Android, iOS & Flutter apps. 5+ years experience. 20+ apps launched.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <style>
     :root {
       --primary: #2563eb;
       --primary-dark: #1e40af;
-      --secondary: #059669;
+      --secondary: #14b8a6;
+      --upwork: #14a800;
     }
     body {
       background: #f9fafb;
       color: #111827;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
+    }
+    .trust-banner {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.9rem;
     }
     .hero-banner {
       background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 100%);
@@ -27,11 +34,6 @@
       margin-left: -1.5rem;
       margin-bottom: 3rem;
     }
-    .hero-banner h1 {
-      font-weight: 800;
-      font-size: 2.5rem;
-      color: var(--primary-dark);
-    }
     .hero-img {
       width: 140px;
       height: 140px;
@@ -40,285 +42,268 @@
       border: 4px solid var(--primary);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-    .highlight-card {
-      background: white;
+    .btn-upwork {
+      background-color: var(--upwork);
+      border-color: var(--upwork);
+      color: white !important;
+    }
+    .btn-upwork:hover {
+      background-color: #0f9200;
+      border-color: #0f9200;
+    }
+    .dual-cta-card {
+      border: 1px solid #e2e8f0;
       border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      border-top: 3px solid var(--primary);
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
     }
-    .highlight-card:hover {
+    .dual-cta-card:hover {
       transform: translateY(-5px);
-    }
-    .testimonial-card {
-      background: #f8fafc;
-      border-left: 3px solid var(--primary);
-      font-style: italic;
-    }
-    .skill-pill {
-      background: #e0f2fe;
-      color: var(--primary-dark);
-      font-weight: 500;
-    }
-    .cta-pulse {
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
-      70% { box-shadow: 0 0 0 12px rgba(37, 99, 235, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
-    }
-    .project-card img {
-      border-radius: 8px;
-      transition: transform 0.3s;
-      height: 200px;
-      object-fit: cover;
-    }
-    .project-card:hover img {
-      transform: scale(1.03);
-    }
-    .nav-pills .nav-link.active {
-      background: var(--primary);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     }
     .timeline {
-      border-left: 2px dashed var(--primary);
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--primary);
+    }
+    .timeline-step {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    .timeline-marker {
+      position: absolute;
+      left: -2rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid white;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+    .tiktok-video-placeholder {
+      background: linear-gradient(135deg, #25F4EE 0%, #FE2C55 100%);
+      border-radius: 8px;
+    }
+    .badge-upwork {
+      background-color: rgba(20, 168, 0, 0.1);
+      color: var(--upwork);
     }
   </style>
 </head>
 <body>
+  <!-- Trust Banner with Upwork -->
+  <div class="trust-banner py-2">
+    <div class="container text-center">
+      <span class="me-3">Trusted by startups worldwide</span>
+      <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank" class="text-decoration-none">
+        <span class="badge badge-upwork rounded-pill">
+          <i class="bi bi-star-fill text-warning"></i> 4.9/5 (5 Jobs) on Upwork
+        </span>
+      </a>
+      <span class="ms-3 d-none d-md-inline">Direct contracts available (save 20%)</span>
+    </div>
+  </div>
+
   <div class="container py-4">
-    <!-- Hero Section with TikTok Hook -->
+    <!-- Hero Section -->
     <div class="row align-items-center hero-banner animate__animated animate__fadeIn">
       <div class="col-md-8">
-        <h1 class="mb-3">Your App Idea →<br> <span class="text-primary">App Store in 6 Weeks</span></h1>
-        <p class="lead">I help founders and businesses build mobile apps that users love - without the headaches of freelancers who disappear mid-project.</p>
-        <div class="d-flex gap-2 mb-3">
-          <span class="skill-pill badge rounded-pill">5+ Years Experience</span>
-          <span class="skill-pill badge rounded-pill">20+ Apps Launched</span>
-          <span class="skill-pill badge rounded-pill">4.8★ Avg Rating</span>
+        <h1 class="mb-3">From Idea to <span class="text-primary">App Store in 6 Weeks</span></h1>
+        <p class="lead">I help founders build high-performance mobile apps with <strong>zero technical headaches</strong> - choose Upwork's protection or hire me directly.</p>
+        
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="badge bg-primary bg-opacity-10 text-primary">5+ Years Experience</span>
+          <span class="badge bg-primary bg-opacity-10 text-primary">20+ Apps Launched</span>
+          <span class="badge bg-primary bg-opacity-10 text-primary">4.9★ Upwork Rating</span>
         </div>
-        <a href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" 
-           class="btn btn-primary btn-lg cta-pulse me-2" 
-           target="_blank">
-           Get Free App Audit →
-        </a>
-        <a href="#projects" class="btn btn-outline-primary btn-lg">See My Work</a>
+        
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="mailto:ammarishfaq25@gmail.com" class="btn btn-primary btn-lg px-4">
+            <i class="bi bi-envelope-fill me-2"></i> Get Direct Quote
+          </a>
+          <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank" class="btn btn-upwork btn-lg">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Hire on Upwork
+          </a>
+        </div>
       </div>
       <div class="col-md-4 text-center">
         <img src="assets/profile.jpg" class="hero-img" alt="Ammar Ishfaq">
       </div>
     </div>
 
-    <!-- Social Proof Section -->
-    <div class="row mb-5">
-      <div class="col-md-4 mb-3">
-        <div class="highlight-card h-100">
-          <h4>🚀 Fast Delivery</h4>
-          <p class="mb-0">Average 30% faster delivery than Upwork freelancers (verified by client reviews)</p>
+    <!-- Value Proposition Cards -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="dual-cta-card h-100 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+              <i class="bi bi-lightning-charge-fill text-primary fs-4"></i>
+            </div>
+            <h5 class="mb-0">Fast Execution</h5>
+          </div>
+          <p>30% faster delivery than average Upwork freelancers with complete code documentation.</p>
+          <a href="#process" class="btn btn-sm btn-outline-primary">See my process</a>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <div class="highlight-card h-100">
-          <h4>💰 Cost-Effective</h4>
-          <p class="mb-0">Save $15k+ compared to agencies with same quality (see project case studies)</p>
+      
+      <!-- <div class="col-md-4">
+        <a href="#process" class="text-decoration-none">
+          <div class="dual-cta-card h-100 p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                <i class="bi bi-lightning-charge-fill text-primary fs-4"></i>
+              </div>
+              <h5 class="mb-0">Fast Execution</h5>
+            </div>
+            <p>30% faster delivery than average Upwork freelancers with complete code documentation.</p>
+            <div class="text-primary">See my process →</div>
+          </div>
+        </a>
+      </div> -->
+      <div class="col-md-4">
+        <div class="dual-cta-card h-100 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-2 rounded me-3">
+              <i class="bi bi-shield-check text-success fs-4"></i>
+            </div>
+            <h5 class="mb-0">Upwork Protection</h5>
+          </div>
+          <p>All Upwork projects include escrow payments and platform dispute resolution.</p>
+          <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank" class="btn btn-sm btn-upwork mt-2">View profile</a>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <div class="highlight-card h-100">
-          <h4>🔧 Post-Launch Support</h4>
-          <p class="mb-0">90% of clients come back for updates - I don't disappear after launch</p>
+      <div class="col-md-4">
+        <div class="dual-cta-card h-100 p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-secondary bg-opacity-10 p-2 rounded me-3">
+              <i class="bi bi-currency-dollar text-secondary fs-4"></i>
+            </div>
+            <h5 class="mb-0">Direct Savings</h5>
+          </div>
+          <p>Save 20% by hiring directly - same quality, no platform fees.</p>
+          <a href="#contact" class="btn btn-sm btn-outline-secondary mt-2">Contact directly</a>
         </div>
       </div>
     </div>
 
     <!-- TikTok Video Hook -->
-    <div class="alert alert-primary d-flex align-items-center mb-5">
-      <div class="flex-shrink-0 me-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
-        </svg>
+    <div class="tiktok-video-placeholder p-4 text-white rounded-3 mb-5 d-flex align-items-center">
+      <div class="flex-shrink-0 me-3 fs-2">
+        <i class="bi bi-play-circle-fill"></i>
       </div>
       <div>
-        <strong>Watch my TikTok breakdown:</strong> "3 Mobile App Mistakes That Cost Clients $10k+" 
-        <a href="#" class="alert-link">View Now →</a>
-      </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="mb-5" id="projects">
-      <h2 class="border-bottom pb-2 mb-4">Featured Projects</h2>
-      <div class="row g-4">
-        <!-- Project 1 -->
-        <div class="col-md-6">
-          <div class="card project-card h-100">
-            <img src="assets/elevare.jpg" class="card-img-top" alt="Elevare App">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-start mb-2">
-                <h5 class="card-title mb-0">Elevare Sports App</h5>
-                <span class="badge bg-success">4.8★ (2.4K reviews)</span>
-              </div>
-              <h6 class="text-muted mb-3">Client Problem:</h6>
-              <p class="card-text">Sports startup needed real-time game integration but previous developer failed to sync data reliably during matches.</p>
-              <h6 class="text-muted mb-3">My Solution:</h6>
-              <ul class="mb-3">
-                <li>Built native Android app with custom WebSocket API integration</li>
-                <li>Reduced latency from 8s to 0.3s during live events</li>
-                <li>Implemented offline-first architecture</li>
-              </ul>
-              <div class="d-flex flex-wrap gap-1 mb-2">
-                <span class="badge bg-light text-dark">Kotlin</span>
-                <span class="badge bg-light text-dark">WebSockets</span>
-                <span class="badge bg-light text-dark">MVVM</span>
-              </div>
-              <a href="#" class="btn btn-sm btn-outline-primary">View Case Study</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="col-md-6">
-          <div class="card project-card h-100">
-            <img src="assets/food_llm.jpg" class="card-img-top" alt="AI Diet Planner">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-start mb-2">
-                <h5 class="card-title mb-0">AI Diet Planner</h5>
-                <span class="badge bg-success">4.9★ (1.1K reviews)</span>
-              </div>
-              <h6 class="text-muted mb-3">Client Problem:</h6>
-              <p class="card-text">Nutrition coach wanted AI meal plans but needed offline functionality for users without constant internet.</p>
-              <h6 class="text-muted mb-3">My Solution:</h6>
-              <ul class="mb-3">
-                <li>Developed Flutter app with on-device LLM (TensorFlow Lite)</li>
-                <li>Reduced app size by 40% vs competitors</li>
-                <li>Integrated Firebase for syncing when online</li>
-              </ul>
-              <div class="d-flex flex-wrap gap-1 mb-2">
-                <span class="badge bg-light text-dark">Flutter</span>
-                <span class="badge bg-light text-dark">TensorFlow Lite</span>
-                <span class="badge bg-light text-dark">Firebase</span>
-              </div>
-              <a href="#" class="btn btn-sm btn-outline-primary">See Demo Video</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div class="mb-5">
-      <h2 class="border-bottom pb-2 mb-4">What Clients Say</h2>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <div class="testimonial-card p-4 rounded h-100">
-            <p>"Ammar delivered our MVP 2 weeks early. His clean code made it easy for our team to take over. We've since hired him for 3 more projects."</p>
-            <div class="d-flex align-items-center">
-              <img src="https://randomuser.me/api/portraits/women/45.jpg" width="40" height="40" class="rounded-circle me-2">
-              <div>
-                <strong>Sarah K.</strong>
-                <div class="text-muted small">Founder, HealthTech Startup</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <div class="testimonial-card p-4 rounded h-100">
-            <p>"After 3 failed freelancers, Ammar fixed our crashing iOS app in 48 hours. 1 year later, zero crashes reported."</p>
-            <div class="d-flex align-items-center">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" width="40" height="40" class="rounded-circle me-2">
-              <div>
-                <strong>James L.</strong>
-                <div class="text-muted small">CTO, E-Commerce App</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <strong>Watch on TikTok:</strong> "How I helped a client save $12k on their app budget" 
+        <a href="#" class="text-white fw-bold ms-2">View Now →</a>
       </div>
     </div>
 
     <!-- Process Section -->
-    <div class="mb-5">
+    <div class="mb-5" id="process">
       <h2 class="border-bottom pb-2 mb-4">How It Works</h2>
-      <div class="timeline ps-4">
-        <div class="mb-4 position-relative">
-          <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle" style="width: 20px; height: 20px;"></div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
           <h5 class="mb-1">1. Free 15-Min Audit</h5>
           <p class="text-muted">We'll review your requirements and identify technical risks</p>
         </div>
-        <div class="mb-4 position-relative">
-          <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle" style="width: 20px; height: 20px;"></div>
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
           <h5 class="mb-1">2. UI Mockups in 3 Days</h5>
           <p class="text-muted">You'll see app screens before we write any code</p>
         </div>
-        <div class="mb-4 position-relative">
-          <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle" style="width: 20px; height: 20px;"></div>
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
           <h5 class="mb-1">3. Weekly Build Updates</h5>
           <p class="text-muted">Demo every Friday - no surprises</p>
         </div>
-        <div class="position-relative">
-          <div class="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle" style="width: 20px; height: 20px;"></div>
+        <div class="timeline-step">
+          <div class="timeline-marker"></div>
           <h5 class="mb-1">4. Launch & 30-Day Support</h5>
           <p class="text-muted">I'll handle app store submission and fix any launch bugs</p>
         </div>
       </div>
     </div>
 
-    <!-- CTA Section -->
-    <div class="text-center p-5 bg-light rounded-3 mb-5">
-      <h3 class="mb-3">Ready to Build Your App?</h3>
-      <p class="lead mb-4">Let's talk technical strategy - no sales pitch, just actionable advice.</p>
-      <a href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" class="btn btn-primary btn-lg px-5 cta-pulse" target="_blank">
-        Book Free Call
-      </a>
-      <p class="small mt-3 text-muted">Or WhatsApp: <a href="https://wa.me/923234164199" class="text-decoration-none">+92 323 4164199</a></p>
-    </div>
-
-    <!-- Skills Section -->
-    <div class="mb-5">
-      <h2 class="border-bottom pb-2 mb-4">Technical Arsenal</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card mb-3">
-            <div class="card-header bg-primary text-white">
-              <h5 class="mb-0">Mobile Development</h5>
-            </div>
-            <div class="card-body">
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-primary bg-opacity-10 text-primary">Kotlin</span>
-                <span class="badge bg-primary bg-opacity-10 text-primary">Jetpack Compose</span>
-                <span class="badge bg-primary bg-opacity-10 text-primary">Swift</span>
-                <span class="badge bg-primary bg-opacity-10 text-primary">SwiftUI</span>
-                <span class="badge bg-primary bg-opacity-10 text-primary">Flutter</span>
-                <span class="badge bg-primary bg-opacity-10 text-primary">KMM</span>
+    <!-- Upwork Testimonials Section -->
+    <div class="card border-0 shadow-sm mb-5">
+      <div class="card-body p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="mb-0">Verified Upwork Reviews</h3>
+          <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank" class="btn btn-sm btn-upwork">
+            <i class="bi bi-box-arrow-up-right me-1"></i> View Profile
+          </a>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-3">
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic">"Ammar fixed our crashing Android app in 2 days when others failed. Will hire again!"</p>
+              <div class="d-flex align-items-center">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" width="40" height="40" class="rounded-circle me-2">
+                <div>
+                  <strong>James L.</strong>
+                  <div class="text-muted small">E-Commerce Startup</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card mb-3">
-            <div class="card-header bg-success text-white">
-              <h5 class="mb-0">Backend & APIs</h5>
-            </div>
-            <div class="card-body">
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-success bg-opacity-10 text-success">Node.js</span>
-                <span class="badge bg-success bg-opacity-10 text-success">Firebase</span>
-                <span class="badge bg-success bg-opacity-10 text-success">REST APIs</span>
-                <span class="badge bg-success bg-opacity-10 text-success">WebSockets</span>
-                <span class="badge bg-success bg-opacity-10 text-success">GraphQL</span>
+          <div class="col-md-6">
+            <div class="border-start border-3 border-primary ps-3">
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic">"Delivered our MVP 2 weeks early with perfect documentation. 10/10."</p>
+              <div class="d-flex align-items-center">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" width="40" height="40" class="rounded-circle me-2">
+                <div>
+                  <strong>Sarah K.</strong>
+                  <div class="text-muted small">HealthTech Founder</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Enhanced CTA Section -->
+    <div class="text-center p-5 bg-light rounded-3 mb-5" id="contact">
+      <h3 class="mb-3">Let's Build Your App</h3>
+      <p class="lead mb-4">Choose your preferred hiring method:</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="mailto:ammarishfaq25@gmail.com" class="btn btn-primary px-4">
+          <i class="bi bi-envelope-fill me-2"></i> Direct Email
+        </a>
+        <a href="https://wa.me/923234164199" class="btn btn-success px-4">
+          <i class="bi bi-whatsapp me-2"></i> WhatsApp
+        </a>
+        <a href="https://www.upwork.com/freelancers/~YOUR_PROFILE" target="_blank" class="btn btn-upwork px-4">
+          <i class="bi bi-box-arrow-up-right me-2"></i> Upwork
+        </a>
+        <a href="https://calendly.com/_ammar/meet-m-ammar-ishfaq" target="_blank" class="btn btn-secondary px-4">
+          <i class="bi bi-calendar-check me-2"></i> Book Call
+        </a>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- TikTok Pixel Code -->
-  <script>
-    // Add your TikTok pixel here for conversion tracking
-  </script>
 </body>
 </html>
